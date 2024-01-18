@@ -1,2 +1,2 @@
-# C-
+# C++
 Learning journey of C++

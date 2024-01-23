@@ -1,17 +1,25 @@
+/*Make a program that categorizes a given temperature into "Low," "Medium," or "High."
+ * define the ranges yourself like low (-10 to 0), medium (0-20), high (20-40)
+*/
+
 #include <iostream>
 using namespace std;
 
-int main() {
-    double bank_balance = 5000;
-    double withdraw_amount;
-    cout << "Enter the amount you want to withdraw: " << endl;
-    cin >> withdraw_amount;
-    if(withdraw_amount > 0 && withdraw_amount <= bank_balance) {
-        bank_balance -= withdraw_amount;
-        cout << "Transaction Complete" << endl;
+int main(){
+    int temp;
+    cout << "Input a temperature for classification: ";
+    cin >> temp;
+    if(temp < -10 || temp > 40){
+        cout << "Temperature out of range";
+    }
+    else if(temp < 0){
+        cout << "Cold";
+    }
+    else if(temp < 20){
+        cout << "Medium";
     }
     else{
-        cout << "Transaction refused" << endl;
+        cout << "High";
     }
     return 0;
 }
